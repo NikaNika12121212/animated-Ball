@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bouncing Button</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: white;
+    }
+
+    #burti {
+        position: relative;      
+        border-radius: 50%;
+        background-color: chartreuse;
+        width: 100px;
+        height: 100px;
+        transition: top 0.5s ease-in-out; 
+        top: 0;                            
+    }
+
+    .down {
+        top: 400px;
+    }
+
+    button {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+    }
+</style>
+</head>
+<body>
+
+<button id="jump">
+    <div id="burti"></div>
+</button>
+
+<script>
+const burtiElementi = document.getElementById("burti");
+const jumpButton = document.getElementById("jump");
+
+jumpButton.addEventListener("click", () => {
+    burtiElementi.classList.toggle("down");
+});
+</script>
+
+</body>
+</html>
